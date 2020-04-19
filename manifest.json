@@ -1,0 +1,29 @@
+{
+  "name": "Whole Foods Delivery Checker",
+  "version": "1.0",
+  "description": "For when you're sick of manually refreshing the page.",
+  "permissions": ["https://www.amazon.com/*","activeTab","declarativeContent","storage"],
+  "content_scripts": [
+    {
+    "matches": ["https://www.amazon.com/gp/buy/shipoptionselect/*"],
+    "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "coronaface.png"
+      }
+  },
+  "web_accessible_resources": [
+    "alertSound.mp3"
+  ],
+  "icons": {
+    "128": "coronaface.png"
+  },
+  "manifest_version": 2
+}

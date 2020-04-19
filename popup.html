@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        font-family: arial, sans-serif;
+        color: #000;
+        font-size: 11px;
+      }
+      body {
+        display: inline-block;
+        text-align: center;
+        padding: 25px 40px;
+      }
+      h1 {
+        font-size: 16px;
+        text-align: center;
+        font-weight: 400;
+        margin-bottom: 25px;
+      }
+      button {
+        outline: 0;
+        display: block;
+        border: 2px solid #ffad32;
+        background: transparent;
+        height: 40px;
+        width: 140px;
+        margin: 15px auto;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      button:last-of-type {
+        margin-bottom: 40px;
+      }
+      button:hover {
+        background-color: #ffad32;
+        border: 2px solid #ffad32;
+        color: #fff;
+      }
+      button.active{
+        background-color: #f90;
+        border: 2px solid #f90;
+        color: #fff;
+        cursor: default;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Refresh Frequency</h1>
+    <button value="5000">5 sec</button>
+    <button value="10000">10 sec</button>
+    <button value="15000">15 sec</button>
+    <button id="stop" value="0">Stop</button>
+    <script src="popup.js"></script>
+  </body>
+</html>
